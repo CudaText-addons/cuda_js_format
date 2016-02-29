@@ -1,0 +1,21 @@
+[info]
+title=JS Format
+desc=Formats JavaScript or JSON code
+type=cudatext-plugin
+subdir=cuda_js_format
+
+[item1]
+section=commands
+caption=JS Format\Format
+method=run
+lexers=JavaScript,JSON
+
+[item2]
+section=commands
+caption=JS Format\Configure
+method=config_global
+
+[item3]
+section=commands
+caption=JS Format\Configure (local)
+method=config_local
