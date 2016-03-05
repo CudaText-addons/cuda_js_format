@@ -3,6 +3,7 @@ title=JS Format
 desc=Formats JavaScript or JSON code
 type=cudatext-plugin
 subdir=cuda_js_format
+homepage=https://github.com/CudaText-addons/cuda_js_format
 
 [item1]
 section=commands
