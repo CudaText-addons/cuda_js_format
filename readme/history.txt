@@ -1,7 +1,8 @@
 
 2019.05.02
-+ added command "JSON Stringify" which was ported from Sublime plugin https://github.com/Nadock/json_stringify
++ added command "JSON Stringify" which was ported from https://github.com/Nadock/json_stringify
 + updated JSBeautifier lib
+* change: now JSON config file is used
 
 2015.10
 initial version
