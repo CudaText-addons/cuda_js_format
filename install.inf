@@ -13,10 +13,16 @@ lexers=JavaScript,JSON
 
 [item2]
 section=commands
+caption=JS Format\JSON Stringify
+method=string
+lexers=JSON
+
+[item10]
+section=commands
 caption=JS Format\Configure
 method=config_global
 
-[item3]
+[item11]
 section=commands
 caption=JS Format\Configure (local)
 method=config_local

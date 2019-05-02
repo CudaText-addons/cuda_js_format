@@ -1,6 +1,7 @@
-from cudatext import *
 import sys
 import os
+from cudatext import *
+from .json_stringify import *
 
 sys.path.append(os.path.dirname(__file__))
 import jsbeautifier
@@ -34,6 +35,15 @@ def options():
 def do_format(text):
     return jsbeautifier.beautify(text, options())
 
+def do_stringify(text):
+
+    #if ed.get_prop(PROP_TAB_SPACES):
+    #    indent = ' '*ed.get_prop(PROP_TAB_SIZE)
+    #else:
+    #    indent = '\t'
+    return invert_json_string(text)
+
+
 class Command:
     def config_global(self):
         format_proc.config_global()
@@ -43,3 +53,6 @@ class Command:
 
     def run(self):
         format_proc.run(do_format)
+
+    def string(self):
+        format_proc.run(do_stringify)
