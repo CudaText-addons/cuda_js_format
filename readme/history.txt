@@ -1,3 +1,6 @@
 
-1.0.0 (oct 2015)
-init
+2019.05.02
++ added command "JSON Stringify" which was ported from Sublime plugin https://github.com/Nadock/json_stringify
+
+2015.10
+initial version
