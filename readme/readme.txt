@@ -8,16 +8,17 @@ Plugin has configuration file, which can be edited using two "Configure" command
 - Configure: opens config-file from "settings" folder, which is used when local file doesn't exist.
 - Configure (local): opens config-file from the folder of current editor file. If local file doesn't exist, command suggests to copy global file into local name, and then opens it. 
 
-Options:
+Options [default]
+
 - "indent_size"                Indentation size [4]
 - "indent_char"                Indentation character [" "]
-- "indent_with_tabs"           Indent with tabs, overrides -s and -c
-- "preserve_newlines"          Preserve line-breaks (--no-preserve-newlines disables)
+- "indent_with_tabs"           Indent with tabs
+- "preserve_newlines"          Preserve line-breaks
 - "max_preserve_newlines"      Number of line-breaks to be preserved in one chunk [10]
 - "space_in_paren"             Add padding spaces within paren, ie. f( a, b )
-- "e4x"                        Pass E4X xml literals through untouched
+- "e4x"                        Pass E4X XML literals through untouched
 - "jslint_happy"               Enable jslint-stricter mode
-- "brace_style"                [collapse|expand|end-expand] ["collapse"]
+- "brace_style"                Possible values: "collapse", "expand", "end-expand" ["collapse"]
 - "keep_array_indentation"     Preserve array indentation
 - "keep_function_indentation"  Preserve function indentation
 - "unescape_strings"           Decode printable characters encoded in xNN notation
