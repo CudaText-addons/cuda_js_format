@@ -1,5 +1,6 @@
 import sys
 import os
+import json
 from cudatext import *
 from .json_stringify import *
 
@@ -7,14 +8,18 @@ sys.path.append(os.path.dirname(__file__))
 import jsbeautifier
 import format_proc
 
-format_proc.INI = 'cuda_js_format.py'
+format_proc.INI = 'cuda_js_format.json'
 format_proc.MSG = '[JS Format] '
 
 def options():
+
     op = jsbeautifier.default_options()
-    ini = format_proc.ini_filename()
-    if os.path.isfile(ini):
-        d = eval(open(ini).read())
+    fn = format_proc.ini_filename()
+    if not os.path.isfile(fn):
+        return op
+
+    with open(fn) as f:
+        d = json.load(f)    
         op.indent_size               = d["indent_size"]
         op.indent_char               = d["indent_char"]
         op.indent_with_tabs          = d["indent_with_tabs"]
@@ -33,6 +38,7 @@ def options():
     return op
 
 def do_format(text):
+
     return jsbeautifier.beautify(text, options())
 
 def do_stringify(text):
@@ -45,6 +51,7 @@ def do_stringify(text):
 
 
 class Command:
+
     def config_global(self):
         format_proc.config_global()
 
