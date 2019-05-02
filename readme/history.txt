@@ -1,6 +1,7 @@
 
 2019.05.02
 + added command "JSON Stringify" which was ported from Sublime plugin https://github.com/Nadock/json_stringify
++ updated JSBeautifier lib
 
 2015.10
 initial version
