@@ -1,4 +1,7 @@
 
+2019.05.04
+- fix: crash if config file has not all options
+
 2019.05.02
 + added command "JSON Stringify" which was ported from https://github.com/Nadock/json_stringify
 + updated JSBeautifier lib

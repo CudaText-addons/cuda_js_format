@@ -20,21 +20,21 @@ def options():
 
     with open(fn) as f:
         d = json.load(f)    
-        op.indent_size               = d["indent_size"]
-        op.indent_char               = d["indent_char"]
-        op.indent_with_tabs          = d["indent_with_tabs"]
-        op.preserve_newlines         = d["preserve_newlines"]
-        op.max_preserve_newlines     = d["max_preserve_newlines"]
-        op.space_in_paren            = d["space_in_paren"]
-        op.e4x                       = d["e4x"]
-        op.jslint_happy              = d["jslint_happy"]
-        op.brace_style               = d["brace_style"]
-        op.keep_array_indentation    = d["keep_array_indentation"]
-        op.keep_function_indentation = d["keep_function_indentation"]
-        op.eval_code                 = d["eval_code"]
-        op.unescape_strings          = d["unescape_strings"]
-        op.wrap_line_length          = d["wrap_line_length"]
-        op.break_chained_methods     = d["break_chained_methods"]
+        op.indent_size               = d.get('indent_size', 4)
+        op.indent_char               = d.get('indent_char', ' ')
+        op.indent_with_tabs          = d.get('indent_with_tabs', False)
+        op.preserve_newlines         = d.get('preserve_newlines', True)
+        op.max_preserve_newlines     = d.get('max_preserve_newlines', 10)
+        op.space_in_paren            = d.get('space_in_paren', False)
+        op.e4x                       = d.get('e4x', False)
+        op.jslint_happy              = d.get('jslint_happy', False)
+        op.brace_style               = d.get('brace_style', 'collapse')
+        op.keep_array_indentation    = d.get('keep_array_indentation', False)
+        op.keep_function_indentation = d.get('keep_function_indentation', False)
+        op.eval_code                 = d.get('eval_code', False)
+        op.unescape_strings          = d.get('unescape_strings', False)
+        op.wrap_line_length          = d.get('wrap_line_length', 0)
+        op.break_chained_methods     = d.get('break_chained_methods', False)
     return op
 
 def do_format(text):
