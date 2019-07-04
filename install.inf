@@ -4,12 +4,13 @@ desc=Formats JavaScript or JSON code
 type=cudatext-plugin
 subdir=cuda_js_format
 homepage=https://github.com/CudaText-addons/cuda_js_format
+$lex=regex:JSON|JavaScript.*
 
 [item1]
 section=commands
 caption=JS Format\Format
 method=run
-lexers=JavaScript,JSON
+lexers=$lex
 
 [item2]
 section=commands
