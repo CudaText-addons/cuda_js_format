@@ -1,4 +1,7 @@
 
+2019.07.05
++ add: support all lexers which names start from "JavaScript"
+
 2019.05.04
 - fix: crash if config file has not all options
 
