@@ -24,4 +24,14 @@
 
 __author__ = 'Ruslan Spivak <ruslan.spivak@gmail.com>'
 
-from slimit.minifier import minify  # noqa: F401
+import doctest
+import unittest
+
+
+def test_suite():
+    return unittest.TestSuite((
+        doctest.DocFileSuite(
+            '../visitors/nodevisitor.py',
+            optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS
+            ),
+        ))
