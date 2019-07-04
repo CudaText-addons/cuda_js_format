@@ -133,7 +133,7 @@ class Scope(object):
 
         """
         while True:
-            mangled = next(self.base54)
+            mangled = self.base54.next()
 
             # case 1
             ancestor = self._get_scope_with_mangled(mangled)

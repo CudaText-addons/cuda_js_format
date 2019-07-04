@@ -192,7 +192,7 @@ class Lexer(object):
     def __iter__(self):
         return self
 
-    def __next__(self):
+    def next(self):
         token = self.token()
         if not token:
             raise StopIteration
@@ -432,6 +432,6 @@ class Lexer(object):
         return token
 
     def t_error(self, token):
-        print('Illegal character %r at %s:%s after %s' % (
-            token.value[0], token.lineno, token.lexpos, self.prev_token))
+        print 'Illegal character %r at %s:%s after %s' % (
+            token.value[0], token.lineno, token.lexpos, self.prev_token)
         token.lexer.skip(1)
