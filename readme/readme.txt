@@ -1,8 +1,9 @@
 Plugin "JS Format" for CudaText.
 It allows to format source code for lexers JavaScript and JSON, using Python engine from jsbeautifier.org. If selection is made (only normal selection supported) then only selection is formatted, otherwise entire file is formatted.
 
+It also gives command "Minify".
+
 It also gives command "JSON Stringify" which is taken from https://github.com/Nadock/json_stringify
-Plugin gives commands in the "Plugins" menu.
 
 Plugin has configuration file, which can be edited using two "Configure" commands:
 - Configure: opens config-file from "settings" folder, which is used when local file doesn't exist.

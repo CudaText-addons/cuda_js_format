@@ -6,6 +6,7 @@ from .json_stringify import *
 
 sys.path.append(os.path.dirname(__file__))
 import jsbeautifier
+import slimit
 import format_proc
 
 format_proc.INI = 'cuda_js_format.json'
@@ -41,6 +42,10 @@ def do_format(text):
 
     return jsbeautifier.beautify(text, options())
 
+def do_minify(text):
+
+    return slimit.minify(text, mangle=True, mangle_toplevel=True)
+
 def do_stringify(text):
 
     #if ed.get_prop(PROP_TAB_SPACES):
@@ -60,6 +65,9 @@ class Command:
 
     def run(self):
         format_proc.run(do_format)
+
+    def minify(self):
+        format_proc.run(do_minify)
 
     def string(self):
         format_proc.run(do_stringify)

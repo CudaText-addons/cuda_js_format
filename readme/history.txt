@@ -1,5 +1,6 @@
 
 2019.07.05
++ add: function of plugin "JS Minify" is added here
 + add: support all lexers which names start from "JavaScript"
 
 2019.05.04

@@ -14,6 +14,12 @@ lexers=$lex
 
 [item2]
 section=commands
+caption=JS Format\Minify
+method=minify
+lexers=$lex
+
+[item5]
+section=commands
 caption=JS Format\JSON Stringify
 method=string
 lexers=JSON
